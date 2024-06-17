@@ -1,0 +1,19 @@
+{
+    "name": "snake-validator",
+    "version": "1.0.0",
+    "description": "A simple validator for the Snake game using Express.js",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "body-parser": "^1.20.2",
+      "express": "^4.19.2",
+      "uuid": "^8.3.2"
+    }
+  }
+  
