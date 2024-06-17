@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 export class GameState {
   constructor(width, height) {
@@ -11,10 +11,14 @@ export class GameState {
   }
 
   generateFruitPosition() {
-    return {
-      x: Math.floor(Math.random() * this.width),
-      y: Math.floor(Math.random() * this.height),
-    };
+    let fruitPosition;
+    do {
+      fruitPosition = {
+        x: Math.floor(Math.random() * this.width),
+        y: Math.floor(Math.random() * this.height),
+      };
+    } while (fruitPosition.x === 0 && fruitPosition.y === 0); // Ensure fruit is not at the initial snake position
+    return fruitPosition;
   }
 
   moveSnake(tick) {
