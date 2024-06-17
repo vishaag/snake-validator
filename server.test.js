@@ -32,7 +32,7 @@ describe('Snake Game Validator API', () => {
       .send({
         gameId: game.gameId,
         ticks: [
-          { velX: 1, velY: 0 },  // Move right to (1, 0)
+          { velX: 1, velY: 0 },  // Move right to (1, 0) (always default first move)
           { velX: 1, velY: 0 },  // Move right to (2, 0)
           { velX: 0, velY: 1 },  // Move down to (2, 1)
           { velX: 0, velY: 1 },  // Move down to (2, 2)
