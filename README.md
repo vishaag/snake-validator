@@ -9,7 +9,7 @@ This is a simple validator for the Snake game. The validator exposes a web serve
 3. Install the dependencies
 
 ```bash
-git clone https://github.com/your-repo/snake-validator.git
+git clone https://github.com/vishaag/snake-validator.git
 cd snake-validator
 npm install
 ```
