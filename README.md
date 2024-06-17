@@ -32,6 +32,27 @@ Example:
 ```bash
 /new?w=5&h=5
 ```
+
+Example Response:
+```json
+{
+  "gameId": "7ab70b4c-cb89-4493-ac2e-f942165efde9",
+  "width": 5,
+  "height": 5,
+  "score": 0,
+  "fruit": {
+    "x": 3,
+    "y": 0
+  },
+  "snake": {
+    "x": 0,
+    "y": 0,
+    "velX": 1,
+    "velY": 0
+  }
+}
+```
+
 2. Validate Moves
 
 ```bash
@@ -40,12 +61,33 @@ POST /validate
 Validates a series of moves for the game.
 
 Example POST Request Body:
-```bash
+```json
 {
-  "gameId": "your-game-id",
+  "gameId": "7ab70b4c-cb89-4493-ac2e-f942165efde9",
   "ticks": [
-    { "velX": 1, "velY": 0 },
-    { "velX": 0, "velY": 1 }
-  ]
+  { "velX": 1, "velY": 0 },  
+  { "velX": 1, "velY": 0 },
+  { "velX": 1, "velY": 0 }
+]
+}
+
+```
+Example Response (case - valid series of moves where snake eats the fruit and score increments by 1):
+```json
+{
+  "gameId": "7ab70b4c-cb89-4493-ac2e-f942165efde9",
+  "width": 5,
+  "height": 5,
+  "score": 1,
+  "fruit": {
+    "x": 3,
+    "y": 0
+  },
+  "snake": {
+    "x": 3,
+    "y": 0,
+    "velX": 1,
+    "velY": 0
+  }
 }
 ```
