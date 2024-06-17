@@ -24,15 +24,10 @@ npm start
 ## Endpoints
 1. Start a New Game
 
+Example:
 ```bash
-GET /new?w=[width]&h=[height]
+GET /new?w=5&h=5
 ```
-Starts a new game with the specified width and height.
-Example: 
-```bash
-/new?w=5&h=5
-```
-
 Example Response:
 ```json
 {
