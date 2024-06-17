@@ -21,6 +21,12 @@ npm install
 npm start
 ```
 
+### Run tests 
+```bash
+npm test
+```
+
+
 ## Endpoints
 1. Start a New Game
 
